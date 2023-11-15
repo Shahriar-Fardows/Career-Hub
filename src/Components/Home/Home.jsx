@@ -1,9 +1,15 @@
+import Banner from "../Home-page-item/Banner";
+import Category from "../Home-page-item/Catagory";
+import Jobs from "../Home-page-item/jobs";
+
 
 const Home = () => {
     return (
-        <div>
-            <h1>this is home page</h1>
-        </div>
+       <div>
+         <Banner></Banner>
+        <Category></Category>
+        <Jobs></Jobs>
+       </div>
     );
 };
 

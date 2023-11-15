@@ -1,5 +1,5 @@
 
-const Jobs = () => {
+const JobInfo = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const Jobs = () => {
     );
 };
 
-export default Jobs;
+export default JobInfo;

@@ -8,23 +8,25 @@ import {
 import Root from './Components/Root';
 import Home from './Components/Home/Home';
 import Applied from './Components/Pagas/Applied';
-import Jobs from './Components/Pagas/Jobs';
 import Statistics from './Components/Pagas/Statistics';
 import Blogs from './Components/Pagas/Blogs';
+import Error from './Components/Pagas/Error';
+import JobInfo from './Components/Pagas/JobInfo';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root/>,
+    errorElement: <Error/>,
     children: [
       {
-        path: '/home', 
+        path: '/', 
         element: <Home></Home>
       },
       {
         path: '/jobs',
-        element: <Jobs></Jobs>
+        element: <JobInfo></JobInfo>
       },
       {
         path: '/applied',
