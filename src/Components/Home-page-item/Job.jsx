@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { IoLocationOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Job = ({ Alljob }) => {
-    console.log(Alljob)
+   
 
-    const { logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = Alljob;
+    const { id,logo, job_title, company_name, remote_or_onsite, location, job_type, salary } = Alljob;
+
+   
 
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
@@ -26,7 +29,10 @@ const Job = ({ Alljob }) => {
                 </div>
 
                 <div className="card-actions ">
-                    <button className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">Apply Now</button>
+                    <Link to={`/jobDetails/${id}`}>
+                    <button className="btn bg-gradient-to-r from-[#7E90FE] to-[#9873FF] text-white">View Details</button>
+                    </Link>
+                    
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ import Job from "./Job";
 
 const Jobs = () => {
     const [jobs, setJob] = useState([]);
-    const [allJob, setAllJob] = useState(4);
+    const [allJob, setAllJob] = useState(6);
 
     useEffect(() => {
         fetch('jobs.json')
@@ -12,8 +12,12 @@ const Jobs = () => {
             .then(data => setJob(data));
     }, [])
     return (
-        <div>
-            <div className="grid grid-cols-2 gap-4 justify-items-center my-7">
+        <div className="max-w-7xl mx-auto my-11">
+            <div className="text-center">
+                <h1 className="text-6xl my-2">Featured Jobs</h1>
+                <p>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            </div>
+            <div className="grid grid-cols-3 gap-4 justify-items-center my-7">
                 {
                     jobs.slice(0, allJob).map(Alljob => <Job
                         key={Alljob.id}

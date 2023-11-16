@@ -1,3 +1,7 @@
  .active {
     background-image: linear-gradient(to right, #7E90FE , #9873FF);
 }
+
+.nav{
+    background-color: #7e8ffe1c;
+}
